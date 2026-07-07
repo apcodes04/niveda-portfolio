@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="sticky top-32">
               <div className="aspect-[3/4] bg-secondary-bg rounded-xl mb-6 relative overflow-hidden border border-accent-bg/30">
                 <img 
-                  src="/images/Profile/Niveda.jpeg" 
+                  src="/images/Profile/Niveda.webp" 
                   alt="Ar. Niveda Tupasundarya" 
                   className="w-full h-full object-cover"
                 />
