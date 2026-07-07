@@ -12,6 +12,7 @@ const PLANS = [
     src: '/images/detail-images/MOTEL%20DESIGN/plans/ground%20floor/GROUND%20FLOOR%20PLAN.webp',
     keySrc: '/images/detail-images/MOTEL%20DESIGN/plans/ground%20floor/GROUND%20FLOOR%20KEY%20Zoom.webp',
     keyZoomSrc: '/images/detail-images/MOTEL%20DESIGN/plans/ground%20floor/GROUND%20FLOOR%20KEY%20Zoom.webp',
+    zoomSrc: '/images/detail-images/MOTEL%20DESIGN/plans/ground%20floor/0.%20zoomed.jpeg',
     roomInfo: [
       { label: 'Dormitory for Boys', value: '36 Beds' },
       { label: 'Dormitory for Girls', value: '36 Beds' },
@@ -27,6 +28,7 @@ const PLANS = [
     src: '/images/detail-images/MOTEL%20DESIGN/plans/first%20floor/FIRST%20FLOOR%20PLAN.webp',
     keySrc: '/images/detail-images/MOTEL%20DESIGN/plans/first%20floor/FIRST%20FLOOR%20KEY.webp',
     keyZoomSrc: '/images/detail-images/MOTEL%20DESIGN/plans/first%20floor/FIRST%20FLOOR%20KEY%20Zoom.webp',
+    zoomSrc: '/images/detail-images/MOTEL%20DESIGN/plans/first%20floor/1.%20zoomed.jpeg',
     roomInfo: [
       { label: 'Room for 4 people', value: '8 rooms (36 beds)' },
       { label: 'Room for 2 people', value: '16 rooms (18 beds)' },
@@ -39,6 +41,7 @@ const PLANS = [
     src: '/images/detail-images/MOTEL%20DESIGN/plans/second%20floor/SECOND%20FLOOR%20PLAN.webp',
     keySrc: '/images/detail-images/MOTEL%20DESIGN/plans/second%20floor/SECOND%20FLOOR%20KEY%20Zoom.webp',
     keyZoomSrc: '/images/detail-images/MOTEL%20DESIGN/plans/second%20floor/SECOND%20FLOOR%20KEY%20Zoom.webp',
+    zoomSrc: '/images/detail-images/MOTEL%20DESIGN/plans/second%20floor/2.%20zoomed.jpeg',
     roomInfo: [
       { label: 'Room for 4 people', value: '24 rooms 48 beds' },
       { label: 'Room for 2 people', value: '2 rooms 4 beds' },
@@ -94,7 +97,7 @@ export function MotelPlanViewer() {
 
   const handleCardClick = (idx: number) => {
     if (activeIdx === idx) {
-      setSelectedImg(PLANS[idx].src);
+      setSelectedImg(PLANS[idx].zoomSrc || PLANS[idx].src);
     } else {
       rotateTo(idx);
     }
